@@ -88,7 +88,9 @@ export class AppComponent {
   }
 
   getHeroes(): void {
-    this.heroService.getHeroes().then((heroes) => {
+    console.log(new Date().getTime())
+    this.heroService.getHeroesSlowly().then((heroes) => {
+      console.log(new Date().getTime())
       this.heroes = heroes
     })
   }
